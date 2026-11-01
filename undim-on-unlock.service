@@ -1,0 +1,11 @@
+[Unit]
+Description=Reset stuck screen dimming after unlock (KDE bug 513809)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/undim-on-unlock DP-1
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
