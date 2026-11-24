@@ -1,6 +1,6 @@
 # Undim on unlock
 
-A workaround for [KDE bug 513809](https://bugs.kde.org/show_bug.cgi?id=513809). After the screen wakes, PowerDevil sometimes leaves KWin's output dimming at 30%. `kscreen-doctor -o` then shows "dimming to 30%" while brightness is still 100%. The bug is confirmed and still open on Plasma 6.8. A fix went into 6.6.5 but didn't cover every case, and the later fix attempts were reverted or never merged.
+A workaround for [KDE bug 513809](https://bugs.kde.org/show_bug.cgi?id=513809). After the screen wakes, PowerDevil sometimes leaves KWin's output dimming at 30%. `kscreen-doctor -o` then shows "dimming to 30%" while brightness is still 100%. The bug is confirmed and still open on Plasma 6.8. A fix went into 6.6.5 but didn't cover every case, and the later fix attempts were reverted or never merged. Fixed upstream in KDE Plasma 6.8.4 (scheduled for release on Dec 1, 2026). [Commit fb6c6f6f](https://invent.kde.org/plasma/powerdevil/-/commit/fb6c6f6f930f1cfa7f3ca90c037cac790eecc9d8).
 
 On every unlock, this watcher waits 3 seconds. If dimming is still below 100% by then, it resets dimming to 100% and logs a line to the journal.
 
